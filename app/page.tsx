@@ -114,8 +114,8 @@ You have been such a perfect addition to my life. There’s no one else like you
   }
 
   return (
-    <main style={{ background: bg }} className="min-h-screen text-white">
-      <div className="mx-auto max-w-6xl px-5 py-10">
+    <main style={{ background: bg }} className="min-h-[100svh] text-white">
+     <div className="safe-area mx-auto max-w-6xl px-4 sm:px-6 py-8 sm:py-10">
         {/* HERO */}
         <motion.header
           initial={{ opacity: 0, y: 14 }}
@@ -155,7 +155,7 @@ You have been such a perfect addition to my life. There’s no one else like you
                     <button
                       key={i}
                       onClick={() => setIdx(i)}
-                      className={`h-2.5 w-2.5 rounded-full transition ${
+                      className={`h-3 w-3 md:h-3.5 md:w-3.5 rounded-full transition ${
                         i === idx ? "bg-white" : "bg-white/35 hover:bg-white/60"
                       }`}
                       aria-label={`Go to photo ${i + 1}`}
@@ -228,7 +228,7 @@ You have been such a perfect addition to my life. There’s no one else like you
                   className="mt-3 rounded-2xl border border-white/12 bg-white/5 p-4"
                 >
                   <p className="text-sm opacity-85 leading-relaxed">
-                    Happy Valentine’s Day, Jaheema. 🤍
+                    I will choose you over and over again! Happy Valentine’s Day, Jaheema. 🤍
                     <br />
                     <br />— {YOUR_NAME}
                   </p>
@@ -322,7 +322,7 @@ You have been such a perfect addition to my life. There’s no one else like you
               <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#070711] to-transparent opacity-70 rounded-2xl" />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#070711] to-transparent opacity-70 rounded-2xl" />
 
-              <div className="max-h-[420px] md:max-h-[520px] overflow-y-auto rounded-2xl border border-white/10 bg-black/20 p-5 md:p-6">
+              <div className="max-h-[55svh] md:max-h-[60svh] overflow-y-auto rounded-2xl border border-white/10 bg-black/20 p-5 md:p-6">
                 <p className="whitespace-pre-line text-sm md:text-base leading-relaxed opacity-90">
                   {longLetter}
                 </p>
