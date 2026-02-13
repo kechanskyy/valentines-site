@@ -1,3 +1,13 @@
+export default function Page() {
+  return (
+    <main>
+      <h1>Test</h1>
+    </main>
+  );
+}
+
+
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
