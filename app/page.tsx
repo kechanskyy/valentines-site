@@ -75,7 +75,7 @@ export default function Page() {
     "The next time I see you, we’re going to stay in bed all day for at least two days 🤣🤣🤣. Not doing what you think — just me holding you and appreciating the fact that I get to smell you and cuddle you again.";
 
   const passHint =
-    "Hint: the date of our first kiss (the one you don’t seem to remember lol — month first, then year).";
+    "Hint: the date of our first kiss (the one you don’t seem to remember lol — month first, then day).";
 
   const longLetter = `Jaheema…
 
