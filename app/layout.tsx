@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jaheemer D",
+  title: "Jaheema D",
   description: "A corner of the internet just for you",
 };
 
