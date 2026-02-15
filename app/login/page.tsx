@@ -12,7 +12,7 @@ export default function LoginPage() {
     e.preventDefault();
 
     if (code.trim() === PASSCODE) {
-      document.cookie =`valentine_auth=1; path=/; domain=.jaheema.com; SameSite=Lax; Secure;`;
+      document.cookie = `valentine_auth=1; path=/; max-age=${60 * 60 * 24 * 7}; SameSite=Lax`;
       window.location.href = "/";
       return;
     }

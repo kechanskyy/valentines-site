@@ -6,15 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 type Card = { title: string; body: string; emoji?: string };
 
 export default function Page() {
-  
-
-  useEffect(() => {
-  // ALWAYS lock on refresh/reload
-  sessionStorage.removeItem("valentine_ok");
-  setUnlocked(false);
-  setPassInput("");
-}, []);
-  
   const photos = useMemo(
     () => Array.from({ length: 10 }, (_, i) => `/photos/${i + 1}.jpg`),
     []
@@ -112,17 +103,15 @@ You have been such a perfect addition to my life. There’s no one else like you
     "#070711";
 
   function tryUnlock() {
-  if (passInput.trim() === PASSCODE) {
-    sessionStorage.setItem("valentine_ok", "1"); // optional, but fine
-    setUnlocked(true);
-    setShake(false);
-  } else {
-    sessionStorage.removeItem("valentine_ok");
-    setUnlocked(false);
-    setShake(true);
-    setTimeout(() => setShake(false), 450);
+    if (passInput.trim() === PASSCODE) {
+      setUnlocked(true);
+      setShake(false);
+    } else {
+      setUnlocked(false);
+      setShake(true);
+      setTimeout(() => setShake(false), 450);
+    }
   }
-}
 
   return (
     <main style={{ background: bg }} className="min-h-[100svh] text-white">
