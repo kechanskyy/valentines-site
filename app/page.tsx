@@ -7,7 +7,6 @@ type Card = { title: string; body: string; emoji?: string };
 
 export default function Page() {
   
-  export default function Page() {
 
   useEffect(() => {
     const clearAuth = () => {
