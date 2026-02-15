@@ -6,6 +6,22 @@ import { AnimatePresence, motion } from "framer-motion";
 type Card = { title: string; body: string; emoji?: string };
 
 export default function Page() {
+  
+  export default function Page() {
+
+  useEffect(() => {
+    const clearAuth = () => {
+      document.cookie =
+        "valentine_auth=; path=/; domain=.jaheema.com; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    };
+
+    window.addEventListener("beforeunload", clearAuth);
+
+    return () => {
+      window.removeEventListener("beforeunload", clearAuth);
+    };
+  }, []);
+  
   const photos = useMemo(
     () => Array.from({ length: 10 }, (_, i) => `/photos/${i + 1}.jpg`),
     []
